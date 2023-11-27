@@ -3,11 +3,6 @@ namespace Decorator;
 public class Latte : Coffee
 {
     public Latte()
-        : base(20)
+        : base(20, "Латте")
     { }
-
-    public override void Print()
-    {
-        Console.WriteLine($"Цена латте: {Price()}");
-    }
 }

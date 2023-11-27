@@ -5,14 +5,10 @@ namespace Decorator;
 public abstract class Coffee
 {
     private double _price;
-
-    public Coffee(double price)
+    private string _orderLine;
+    public Coffee(double price, string orderLine)
     {
-        if (price < 0)
-        {
-            throw new ArgumentOutOfRangeException("Ошибка ввода данных");
-        }
-
+        _orderLine += orderLine;
         _price = price;
     }
     
@@ -21,8 +17,8 @@ public abstract class Coffee
         return _price;
     }
 
-    public virtual void Print()
+    public virtual string OrderLine()
     {
-        Console.Write($"Цена кофе: {Price()}");
+        return _orderLine;
     }
 }

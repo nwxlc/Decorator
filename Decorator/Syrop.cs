@@ -5,11 +5,6 @@ namespace Decorator;
 public class Syrop : AdishCoffeeDecorator
 {
     public Syrop(Coffee coffee)
-        :base(coffee, 3)
+        :base(coffee, 3, "+сироп")
     {}
-    
-    public override void Print()
-    {
-        Console.WriteLine($"Цена сиропа: {Price()}");
-    }
 }

@@ -1,2 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Decorator;
+
+Coffee latte = new Latte();
+
+latte = new Syrop(latte);
+latte = new Discount(latte);
+
+Console.WriteLine($"{latte.OrderLine()}");

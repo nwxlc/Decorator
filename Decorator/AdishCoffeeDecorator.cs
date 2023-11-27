@@ -5,9 +5,10 @@ namespace Decorator;
 public class AdishCoffeeDecorator : Coffee
 {
     private Coffee _coffee;
+    
 
-    public AdishCoffeeDecorator(Coffee coffee, double adishPrice)
-        : base(adishPrice)
+    public AdishCoffeeDecorator(Coffee coffee, double adishPrice, string adishExtra)
+        : base(adishPrice, adishExtra)
     {
         ArgumentNullException.ThrowIfNull(coffee);
 
@@ -18,9 +19,5 @@ public class AdishCoffeeDecorator : Coffee
     {
         return _coffee.Price() + base.Price();
     }
-
-    public override void Print()
-    {
-        _coffee.Print();
-    }
+    
 }
