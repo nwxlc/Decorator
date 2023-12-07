@@ -4,21 +4,17 @@ namespace Decorator;
 
 public abstract class Coffee
 {
-    private double _price;
-    private string _orderLine;
-    public Coffee(double price, string orderLine)
+    private string _description;
+
+    public Coffee(string description)
     {
-        _orderLine += orderLine;
-        _price = price;
-    }
-    
-    public virtual double Price()
-    {
-        return _price;
+        _description = description;
     }
 
-    public virtual string OrderLine()
+    public virtual string GetDescription()
     {
-        return _orderLine;
+        return _description;
     }
+
+    public abstract double Price();
 }

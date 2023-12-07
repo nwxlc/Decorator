@@ -3,6 +3,10 @@ namespace Decorator;
 public class Latte : Coffee
 {
     public Latte()
-        : base(20, "Латте")
-    { }
+        : base("Латте ") { }
+
+    public override double Price()
+    {
+        return 20;
+    }
 }
